@@ -1,0 +1,81 @@
+//Name: Michael Robert A.Maritana
+//Act description :Write a C++ payroll program that prompts the user for a name, employee number, date of payday, hourly pay rate, and number of hours worked.
+#include <iostream>
+#include <string>
+#include <iomanip>
+
+
+using namespace std;
+
+int main()
+{
+    double tax = 0.12
+    string en , enumber , date;
+    int Hwork , paysum; 
+    double Ph , Pibig, sss;
+    double gross_pay , net_pay , tax;
+    float Hpay
+    double sss , Pibig , Phealth;
+    
+    
+
+    cout << "Enter Name     :";
+    getline (cin,en);
+    cout << "Employee Number    :";
+    getline (cin, enumber);
+    cout << "pay day       : ";
+    getline (cin,date);
+
+
+    cout << end;
+
+
+    cout << "Hourly pay rate        :";
+    cin >> Hpay;
+    cout << "Hours Worked       :";
+    cin >> Hwork;
+
+
+    cout << end;
+
+
+    cout << "Payroll summary for :" << en << endl;
+    cout << "Employee no.        :" << enumber << endl;
+    cout << "Payroll date        :" << date << endl;
+    cout << endl;
+
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+
+
+
+    cout << "You worked " << Hwork << " hours and earned " << Hpay << "per hour" << endl;
+
+    if (net_pay < 5000){
+        cout << "Employee Status : Contractual";
+    }
+    else if (net_pay >= 5000 && net_pay <= 10000){
+        cout << "Employee Status : Probationary";
+    }   
+    else if (net_pay > 10000){
+        cout << "Employee Status : Regular";
+    }   
+
+
+    gross_pay = Hpay * Hwork;
+    tax = gross_pay * tax;
+    net_pay = gross_pay -  tax - Phealth - sss - Pagibig;
+
+    cout << "Gross Pay:                                 " << "Php " << gross_pay << endl;
+    cout << "Withholding Tax:                           " << tax << endl;
+    cout << "Philhealth:                                " << Phealth << endl;
+    cout << "SSS:                                       " << sss << endl;
+    cout << "Pagibig:                                   " << Pibig << endl;
+    cout << "-------------------------------------------" << endl;
+    cout << "Net Pay                                    " << " Peso  " << net_pay << endl;
+
+return 0;
+
+}
